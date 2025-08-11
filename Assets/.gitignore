@@ -1,0 +1,73 @@
+﻿# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Asset store tools
+Assets/AssetStoreTools*
+
+# Crash and temporary files
+sysinfo.txt
+
+# Visual Studio / VS Code
+.vscode/
+.vs/
+*.csproj
+*.sln
+*.user
+*.unityproj
+
+# Rider
+.idea/
+*.sln.iml
+
+# Auto-generated Unity files
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Unity Cache
+UnityCache/
+
+# JetBrains Rider
+*.sln.dotSettings
+
+# Builds
+*.apk
+*.aab
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserstate
+
+# Local config
+*.tmproj
+*.tmTheme
+*.tmPreferences
+
+# Crash logs
+*.stacktrace
+
+# Compiled binaries
+*.dll
+*.exe
+*.so
+*.dylib
+*.bundle
+
+# Logs
+*.log
+
+# Others
+ExportedObj/
+*.unitypackage
+*.psd.meta

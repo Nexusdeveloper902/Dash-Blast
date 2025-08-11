@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a364b4b835e954a9e87fc52c87487c, type: 3}
+  m_Name: BasicGun
+  m_EditorClassIdentifier: 
+  fireRate: 1
+  bulletSpeed: 2
+  bulletsPerShot: 5
+  spreadAngle: 45
+  bulletDamage: 2
+  reloadTime: 3
+  maxAmmo: 16
+  bulletLifeTime: 6
+  bulletPrefab: {fileID: 7250502874398197720, guid: e908acad15786564ba235ba20876f080, type: 3}
