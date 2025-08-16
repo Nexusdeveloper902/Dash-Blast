@@ -20,13 +20,14 @@ public class Bullet : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D other)
      {
-          if (other.GetComponent<Health>() != null || other.GetComponentInChildren<Health>() != null || other.GetComponentInParent<Health>() != null)
+          Debug.Log(other.name);
+          if (other.GetComponent<Health>() != null)
           {
                var healthComponent = other.GetComponent<Health>();
-               healthComponent = other.GetComponentInParent<Health>();
-               healthComponent = other.GetComponentInChildren<Health>();
-               
+               Debug.Log(healthComponent);
                healthComponent.TakeDamage(damage);
           }
+          
+          if (!other.CompareTag("Player") && !other.CompareTag("Bullet")) Destroy(gameObject);
      }
 }

@@ -2,42 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class BaseGun : Gun
 {
-    [SerializeField] private GunData gunData;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private int currentAmmo;
-    
-    private bool isReloading;
-    private float fireCooldown;
-    
-    private void Start()
-    {
-        currentAmmo = gunData.maxAmmo;
-    }
-
-    private void Update()
-    {
-        if (isReloading)
-        {
-            return;
-        }
-        
-        fireCooldown -= Time.deltaTime;
-
-        if (Input.GetButton("Fire1") && fireCooldown <= 0f && currentAmmo > 0 && !isReloading)
-        {
-            Shoot();
-            fireCooldown = gunData.fireRate;
-        }
-
-        if (!isReloading && (Input.GetKeyDown(KeyCode.R) || (Input.GetButton("Fire1") && currentAmmo <= 0)))
-        {
-            StartCoroutine(Reload());
-        }
-    }
-
-    private void Shoot()
+    protected override void Shoot()
     {
         if (gunData.bulletsPerShot == 1)
         {
@@ -70,21 +37,5 @@ public class Gun : MonoBehaviour
             }
         }
         currentAmmo--;
-    }
-
-    IEnumerator Reload()
-    {
-        var reloadTimePerBullet = gunData.reloadTime / gunData.maxAmmo;
-        isReloading = true;
-        
-        int bulletsNeeded = gunData.maxAmmo - currentAmmo;
-        
-        for (int i = 0; i < bulletsNeeded; i++)
-        {
-            yield return new WaitForSeconds(reloadTimePerBullet);
-            currentAmmo++;
-        }
-        
-        isReloading = false;
     }
 }
