@@ -304,9 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2fdfdd9420fd14fafcf0bf186d28ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunData: {fileID: 11400000, guid: f8a6401516372d141b87c9762ace830b, type: 2}
+  weaponData: {fileID: 11400000, guid: f8a6401516372d141b87c9762ace830b, type: 2}
   firePoint: {fileID: 519796602}
-  currentAmmo: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
