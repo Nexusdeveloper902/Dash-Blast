@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f4011ed1c2d844b86bc8dc32d63785, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  attackRate: 1
+  damage: 10
+  range: 1
+  weaponName: BaseMelee
+  hitRadius: 0.64
+  hitAngle: 90
+  knockbackForce: 10
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 4294967295

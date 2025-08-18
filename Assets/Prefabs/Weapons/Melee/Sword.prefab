@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.46226418
       objectReference: {fileID: 0}
+    - target: {fileID: 5294524635121467699, guid: 713685b35570c8a45bb83711c60fad0e, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d29c3835e858904eb0074bf3ecb7a77, type: 2}
     - target: {fileID: 8355208489878723786, guid: 713685b35570c8a45bb83711c60fad0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3
