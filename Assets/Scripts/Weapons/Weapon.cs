@@ -12,20 +12,17 @@ public abstract class Weapon : MonoBehaviour
         if (weaponData == null) return;
 
         attackCooldown -= Time.deltaTime;
-
-        // generic input handling — derived classes can override TryAttack to add checks (ammo, reloading, etc.)
-        if (Input.GetButton("Fire1") && attackCooldown <= 0f)
-        {
-            TryAttack();
-            attackCooldown = weaponData.AttackRate;
-        }
     }
 
     // Called when the player requests an attack. Default: just call Attack().
     // Gun overrides this to check ammo and trigger reloads.
-    protected virtual void TryAttack()
+    public virtual void TryAttack()
     {
-        Attack();
+        if (attackCooldown <= 0f)
+        {
+            Attack();
+            attackCooldown = weaponData.AttackRate;
+        }
     }
 
     // The concrete attack implementation (shoot, swing, etc.)

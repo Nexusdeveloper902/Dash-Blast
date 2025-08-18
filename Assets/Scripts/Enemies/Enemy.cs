@@ -1,6 +1,8 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected EnemyStats stats; 
@@ -44,5 +46,5 @@ public abstract class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    protected abstract void Attack();
+    protected abstract void Attack(Collider2D other);
 }

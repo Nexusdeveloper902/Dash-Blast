@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class BaseEnemy : Enemy
 {
-    protected override void Attack()
+    protected override void Attack(Collider2D other)
     {
-        Debug.Log($"{stats.enemyName} slashes player for {stats.damage} damage!");
+        if (other.GetComponent<Health>() != null)
+        {
+            other.GetComponent<Health>().TakeDamage(stats.damage);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Attack();
+        Attack(other);
     }
 }

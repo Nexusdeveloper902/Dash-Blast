@@ -8,13 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2861238802062779071, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: -1238558703138961260, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1238558703138961260, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
+      propertyPath: m_LinearDrag
+      value: 4.58
+      objectReference: {fileID: 0}
+    - target: {fileID: -1238558703138961260, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -1238558703138961260, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2861238802062779071, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.161
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861238802062779071, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.794
       objectReference: {fileID: 0}
     - target: {fileID: 2861238802062779071, guid: 0b05e2bc27a3abb4da35f81603e97189, type: 3}
       propertyPath: m_LocalPosition.z

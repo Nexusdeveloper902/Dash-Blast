@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GunBehaviour : MonoBehaviour
+public class LookAtMouse : MonoBehaviour
 {
     void Update()
     {

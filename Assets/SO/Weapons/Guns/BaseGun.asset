@@ -22,4 +22,4 @@ MonoBehaviour:
   spreadAngle: 45
   reloadTime: 1.5
   maxAmmo: 10
-  bulletLifeTime: 2
+  bulletLifeTime: 10

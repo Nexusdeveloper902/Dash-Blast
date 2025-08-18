@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Gun : Weapon
 {
-    // We store a typed reference to the GunData (weaponData should point to a GunData asset in inspector)
+    // Typed reference to GunData (weaponData should point to a GunData asset in inspector)
     protected GunData gunData => weaponData as GunData;
 
     [SerializeField] protected Transform firePoint;
@@ -26,10 +26,13 @@ public abstract class Gun : Weapon
         currentAmmo = gunData != null ? gunData.MaxAmmo : 0;
     }
 
-    // We override TryAttack to add gun-specific checks (ammo, reload)
-    protected override void TryAttack()
+    // Gun-specific TryAttack: adds ammo + reload checks
+    public override void TryAttack()
     {
         if (isReloading) return;
+
+        // If still on cooldown, skip
+        if (attackCooldown > 0f) return;
 
         if (gunData == null)
         {
@@ -45,7 +48,7 @@ public abstract class Gun : Weapon
             return;
         }
 
-        // If player explicitly presses R, reload.
+        // If player explicitly presses R, reload
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(Reload());
@@ -54,9 +57,10 @@ public abstract class Gun : Weapon
 
         // OK to attack
         Attack();
+        attackCooldown = weaponData.AttackRate;
     }
 
-    // Derived concrete guns implement shooting here
+    // Derived guns implement their own attack behaviour
     protected abstract override void Attack();
 
     protected virtual IEnumerator Reload()
@@ -64,7 +68,7 @@ public abstract class Gun : Weapon
         if (isReloading || gunData == null) yield break;
 
         isReloading = true;
-        // optionally you can play a reload animation/sound here
+        // optionally: play reload animation/sound here
         yield return new WaitForSeconds(gunData.ReloadTime);
         currentAmmo = gunData.MaxAmmo;
         isReloading = false;
