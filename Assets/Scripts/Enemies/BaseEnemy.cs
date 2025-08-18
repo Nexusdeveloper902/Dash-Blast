@@ -1,20 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseEnemy : Enemy
 {
-    protected override void Attack(Collider2D other)
+    protected override void AttackPlayer()
     {
-        if (other.GetComponent<Health>() != null)
+        if (player != null)
         {
-            other.GetComponent<Health>().TakeDamage(stats.damage);
+            Health playerHealth = player.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(stats.damage);
+            }
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Attack(other);
     }
 }

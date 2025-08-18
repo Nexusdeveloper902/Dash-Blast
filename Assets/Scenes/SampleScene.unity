@@ -346,6 +346,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3015998881623097293, guid: 545a4587ec47c09418a66f37d9b39f33, type: 3}
+      propertyPath: colorFlash.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5975619804693178109, guid: 545a4587ec47c09418a66f37d9b39f33, type: 3}
       propertyPath: m_Name
       value: BaseEnemy
@@ -395,10 +399,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1585005664}
-  - component: {fileID: 1585005663}
-  - component: {fileID: 1585005665}
   - component: {fileID: 1585005667}
   - component: {fileID: 1585005666}
+  - component: {fileID: 1585005663}
+  - component: {fileID: 1585005665}
   - component: {fileID: 1585005668}
   - component: {fileID: 1585005669}
   m_Layer: 0
@@ -553,6 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  colorFlash: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,9 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] protected WeaponData weaponData;
+    protected GameObject player;
 
+    private IEnumerator Start()
+    {
+        yield return new WaitForEndOfFrame();
+        player = GameObject.FindWithTag("Player");
+    }
     // general attack cooldown (seconds between attacks)
     protected float attackCooldown;
 

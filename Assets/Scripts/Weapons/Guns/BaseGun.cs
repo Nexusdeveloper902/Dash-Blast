@@ -13,7 +13,7 @@ public class BaseGun : Gun
             var bulletScript = bullet.GetComponent<Bullet>();
             if (bulletScript != null)
             {
-                bulletScript.Initialize(firePoint.right, gunData.BulletSpeed, weaponData.Damage);
+                bulletScript.Initialize(firePoint.right, gunData.BulletSpeed, weaponData.Damage, player);
             }
             Destroy(bullet, gunData.BulletLifeTime);
         }
@@ -31,7 +31,7 @@ public class BaseGun : Gun
                 var bulletScript = bullet.GetComponent<Bullet>();
                 if (bulletScript != null)
                 {
-                    bulletScript.Initialize(rotation * Vector3.right, gunData.BulletSpeed, weaponData.Damage);
+                    bulletScript.Initialize(rotation * Vector3.right, gunData.BulletSpeed, weaponData.Damage, player);
                 }
                 Destroy(bullet, gunData.BulletLifeTime);
             }
